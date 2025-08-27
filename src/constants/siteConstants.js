@@ -8,4 +8,12 @@ export const siteConstants = {
     phone2: "+91-9608312668",
     address: "West Ramkrishna Nagar Near SBI Bank Ramkrishna Nagar Road Patna 800027",
     workingHours: "Mon - Sun : Open 24 hrs",
+    colors: {
+        primary: '#e11c09',    // Red
+        secondary: '#1037b6',  // Blue
+        primaryLight: '#ff2d1a', // Lighter red
+        secondaryLight: '#2b4fd4', // Lighter blue
+        primaryDark: '#b81500',   // Darker red
+        secondaryDark: '#0d2b8f'  // Darker blue
+    }
 }

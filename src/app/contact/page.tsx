@@ -2,310 +2,306 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { siteConstants } from "@/constants/siteConstants";
+import { MapPin, Phone, Mail, Clock, MessageSquare, Star, Send, CheckCircle, ArrowRight, Home, Truck, Package, Users, Award, Shield } from "lucide-react";
 
 export default function ContactPage() {
     return (
         <div className="min-h-screen bg-gray-50">
-            {/* Hero Section */}
-            <section className="bg-gradient-to-br from-[#bf4705] to-[#d45a0a] text-white py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-                        Contact Us
+            {/* Hero Section - Enhanced */}
+            <section className="relative bg-gradient-to-br from-[#e11c09] via-[#b81500] to-[#1037b6] text-white py-20 lg:py-32 overflow-hidden">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-0 left-0 w-72 h-72 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                    <div className="absolute top-1/2 right-0 w-96 h-96 bg-white rounded-full translate-x-1/2 -translate-y-1/2"></div>
+                    <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-white rounded-full -translate-x-1/2 translate-y-1/2"></div>
+                </div>
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+                        <MessageSquare className="w-5 h-5 text-yellow-300 fill-current" />
+                        <span className="text-sm font-medium">Get In Touch</span>
+                    </div>
+                    <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
+                        Let's Start Your
+                        <span className="block bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                            Moving Journey
+                        </span>
+                        Together
                     </h1>
-                    <p className="text-xl lg:text-2xl text-orange-100 max-w-3xl mx-auto leading-relaxed">
-                        Get in touch with us for all your moving needs. Our team is here to help you plan
-                        and execute a smooth, stress-free relocation.
+                    <p className="text-lg lg:text-xl xl:text-2xl text-red-100 max-w-4xl mx-auto leading-relaxed">
+                        Get in touch with us for all your moving needs. Our team is ready to help you plan the perfect relocation experience.
                     </p>
                 </div>
             </section>
 
-            {/* Contact Form & Info */}
-            <section className="py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-16">
-                        {/* Contact Form */}
-                        <div>
-                            <Card className="border-0 shadow-xl">
-                                <CardHeader>
-                                    <CardTitle className="text-3xl text-gray-900">Send us a Message</CardTitle>
-                                    <CardDescription className="text-lg text-gray-600">
-                                        Fill out the form below and we'll get back to you within 24 hours.
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                    <form className="space-y-6">
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div>
-                                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                    First Name *
-                                                </label>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="Enter your first name"
-                                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf4705] focus:border-transparent transition-all duration-200"
-                                                />
-                                            </div>
-                                            <div>
-                                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                    Last Name *
-                                                </label>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="Enter your last name"
-                                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf4705] focus:border-transparent transition-all duration-200"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div>
-                                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                    Email *
-                                                </label>
-                                                <Input
-                                                    type="email"
-                                                    placeholder="Enter your email address"
-                                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf4705] focus:border-transparent transition-all duration-200"
-                                                />
-                                            </div>
-                                            <div>
-                                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                    Phone *
-                                                </label>
-                                                <Input
-                                                    type="tel"
-                                                    placeholder="Enter your phone number"
-                                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf4705] focus:border-transparent transition-all duration-200"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                Service Required
-                                            </label>
-                                            <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf4705] focus:border-transparent transition-all duration-200">
-                                                <option value="">Select a service</option>
-                                                <option value="packing-moving">Packing and Moving Services</option>
-                                                <option value="loading-unloading">Loading and Unloading</option>
-                                                <option value="domestic">Domestic Moving Services</option>
-                                                <option value="office-relocation">Office Relocations</option>
-                                                <option value="car-transport">Car Transportation</option>
-                                                <option value="international">International Moving</option>
-                                                <option value="storage">Warehousing and Storage</option>
-                                                <option value="other">Other</option>
-                                            </select>
-                                        </div>
-
-                                        <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                Moving From
-                                            </label>
-                                            <Input
-                                                type="text"
-                                                placeholder="City, State"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf4705] focus:border-transparent transition-all duration-200"
-                                            />
-                                        </div>
-
-                                        <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                Moving To
-                                            </label>
-                                            <Input
-                                                type="text"
-                                                placeholder="City, State"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf4705] focus:border-transparent transition-all duration-200"
-                                            />
-                                        </div>
-
-                                        <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                Moving Date
-                                            </label>
-                                            <Input
-                                                type="date"
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf4705] focus:border-transparent transition-all duration-200"
-                                            />
-                                        </div>
-
-                                        <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                Message *
-                                            </label>
-                                            <textarea
-                                                rows={4}
-                                                placeholder="Tell us about your moving requirements..."
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf4705] focus:border-transparent transition-all duration-200 resize-none"
-                                            ></textarea>
-                                        </div>
-
-                                        <Button
-                                            type="submit"
-                                            className="w-full bg-[#bf4705] hover:bg-[#a03d04] text-white py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg"
-                                        >
-                                            Send Message
-                                        </Button>
-                                    </form>
-                                </CardContent>
-                            </Card>
-                        </div>
-
-                        {/* Contact Information */}
-                        <div className="space-y-8">
-                            <div>
-                                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                                    Get In Touch
-                                </h2>
-                                <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                                    We're here to help you with all your moving needs. Whether you have questions about our services,
-                                    need a quote, or want to schedule a consultation, don't hesitate to reach out.
-                                </p>
-                            </div>
-
-                            <div className="space-y-6">
-                                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                                    <CardContent className="p-6">
-                                        <div className="flex items-start">
-                                            <div className="w-12 h-12 bg-[#bf4705] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <h3 className="font-semibold text-gray-900 text-lg mb-2">Phone</h3>
-                                                <p className="text-gray-600 mb-1">{siteConstants.phone}</p>
-                                                <p className="text-gray-600">{siteConstants.phone2}</p>
-                                                <p className="text-sm text-gray-500 mt-2">Available 24/7 for urgent inquiries</p>
-                                            </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-
-                                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                                    <CardContent className="p-6">
-                                        <div className="flex items-start">
-                                            <div className="w-12 h-12 bg-[#bf4705] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <h3 className="font-semibold text-gray-900 text-lg mb-2">Email</h3>
-                                                <p className="text-gray-600 mb-1">{siteConstants.email}</p>
-                                                <p className="text-sm text-gray-500 mt-2">We respond within 2 hours during business hours</p>
-                                            </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-
-                                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                                    <CardContent className="p-6">
-                                        <div className="flex items-start">
-                                            <div className="w-12 h-12 bg-[#bf4705] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <h3 className="font-semibold text-gray-900 text-lg mb-2">Office Address</h3>
-                                                <p className="text-gray-600 mb-1">{siteConstants.address}</p>
-                                                <p className="text-sm text-gray-500 mt-2">Visit us for in-person consultation</p>
-                                            </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-
-                                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                                    <CardContent className="p-6">
-                                        <div className="flex items-start">
-                                            <div className="w-12 h-12 bg-[#bf4705] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <h3 className="font-semibold text-gray-900 text-lg mb-2">Business Hours</h3>
-                                                <p className="text-gray-600 mb-1">{siteConstants.workingHours}</p>
-                                                <p className="text-sm text-gray-500 mt-2">Emergency services available 24/7</p>
-                                            </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Map Section */}
+            {/* Contact Form Section - Enhanced */}
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            Find Us
+                        <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#e11c09]/10 to-[#1037b6]/10 text-[#e11c09] px-4 py-2 rounded-full mb-6">
+                            <Send className="w-5 h-5" />
+                            <span className="text-sm font-medium">Send Message</span>
+                        </div>
+                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                            Ready to Get Started?
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Our office is conveniently located in Patna, easily accessible from all parts of the city.
+                            Fill out the form below and we'll get back to you within 24 hours with a personalized quote.
                         </p>
                     </div>
 
-                    <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
-                        <div className="text-center">
-                            <div className="text-6xl mb-4">🗺️</div>
-                            <p className="text-gray-600 text-lg">Interactive Map Coming Soon</p>
-                            <p className="text-gray-500">We're working on integrating a map to show our exact location</p>
+                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
+                        {/* Contact Form - Enhanced with Home Page Fields */}
+                        <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl border border-gray-100 overflow-hidden">
+                            <div className="relative">
+                                {/* Decorative Elements */}
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#e11c09]/10 to-[#1037b6]/10 rounded-full -translate-y-16 translate-x-16"></div>
+                                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-[#1037b6]/10 to-[#e11c09]/10 rounded-full translate-y-12 -translate-x-12"></div>
+
+                                <form className="space-y-6 relative z-10">
+                                    <div className="grid sm:grid-cols-1 gap-4 sm:gap-6">
+                                        <div>
+                                            <label className="block text-sm font-semibold text-gray-700 mb-3">Your Name *</label>
+                                            <Input
+                                                type="text"
+                                                placeholder="Enter your full name"
+                                                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#e11c09] focus:border-[#e11c09] transition-all duration-300 text-base sm:text-lg bg-white/80 backdrop-blur-sm"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-semibold text-gray-700 mb-3">Your Email *</label>
+                                            <Input
+                                                type="email"
+                                                placeholder="Enter your email address"
+                                                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#e11c09] focus:border-[#e11c09] transition-all duration-300 text-base sm:text-lg bg-white/80 backdrop-blur-sm"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label className="block text-sm font-semibold text-gray-700 mb-3">Your Phone Number *</label>
+                                        <Input
+                                            type="tel"
+                                            placeholder="Enter your phone number"
+                                            className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#e11c09] focus:border-[#e11c09] transition-all duration-300 text-base sm:text-lg bg-white/80 backdrop-blur-sm"
+                                        />
+                                    </div>
+
+                                    <div className="grid sm:grid-cols-1 gap-4 sm:gap-6">
+                                        <div>
+                                            <label className="block text-sm font-semibold text-gray-700 mb-3">Move From *</label>
+                                            <Input
+                                                type="text"
+                                                placeholder="Current location"
+                                                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#e11c09] focus:border-[#e11c09] transition-all duration-300 text-base sm:text-lg bg-white/80 backdrop-blur-sm"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-semibold text-gray-700 mb-3">Move To *</label>
+                                            <Input
+                                                type="text"
+                                                placeholder="Destination"
+                                                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#e11c09] focus:border-[#e11c09] transition-all duration-300 text-base sm:text-lg bg-white/80 backdrop-blur-sm"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label className="block text-sm font-semibold text-gray-700 mb-3">Message</label>
+                                        <textarea
+                                            rows={4}
+                                            placeholder="Tell us about your moving requirements, timeline, and any special needs..."
+                                            className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#e11c09] focus:border-[#e11c09] transition-all duration-300 text-base sm:text-lg bg-white/80 backdrop-blur-sm resize-none"
+                                        ></textarea>
+                                    </div>
+
+                                    <Button
+                                        type="submit"
+                                        className="w-full bg-gradient-to-r from-[#e11c09] to-[#1037b6] hover:from-[#b81500] hover:to-[#0d2b8f] text-white py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl group"
+                                    >
+                                        Send Message
+                                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                                    </Button>
+                                </form>
+                            </div>
+                        </div>
+
+                        {/* Contact Information - Enhanced */}
+                        <div className="space-y-6">
+
+
+                            <div className="space-y-4 sm:space-y-6">
+                                {[
+                                    {
+                                        icon: <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
+                                        bgColor: "bg-[#e11c09]",
+                                        title: "Phone",
+                                        content: siteConstants.phone,
+                                        subtitle: siteConstants.phone2,
+                                        description: "Available 24/7 for urgent inquiries"
+                                    },
+                                    {
+                                        icon: <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
+                                        bgColor: "bg-[#1037b6]",
+                                        title: "Email",
+                                        content: siteConstants.email,
+                                        subtitle: "",
+                                        description: "Quick response guaranteed within 24 hours"
+                                    },
+                                    {
+                                        icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
+                                        bgColor: "bg-[#e11c09]",
+                                        title: "Address",
+                                        content: siteConstants.address,
+                                        subtitle: "",
+                                        description: "Visit us anytime during business hours"
+                                    },
+                                    {
+                                        icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
+                                        bgColor: "bg-[#1037b6]",
+                                        title: "Working Hours",
+                                        content: siteConstants.workingHours,
+                                        subtitle: "",
+                                        description: "Emergency services available 24/7"
+                                    }
+                                ].map((item, index) => (
+                                    <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 overflow-hidden">
+                                        <div className="absolute inset-0 bg-gradient-to-br from-[#e11c09]/5 to-[#1037b6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                        <CardContent className="p-4 sm:p-6 relative z-10">
+                                            <div className="flex items-start">
+                                                <div className={`w-10 h-10 sm:w-12 sm:h-12 ${item.bgColor} rounded-xl flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                                                    {item.icon}
+                                                </div>
+                                                <div className="min-w-0 flex-1">
+                                                    <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-1 sm:mb-2">{item.title}</h3>
+                                                    <p className="text-gray-600 mb-1 font-medium text-sm sm:text-base break-words">{item.content}</p>
+                                                    {item.subtitle && <p className="text-gray-600 mb-1 font-medium text-sm sm:text-base break-words">{item.subtitle}</p>}
+                                                    <p className="text-xs sm:text-sm text-gray-500 mt-1 sm:mt-2">{item.description}</p>
+                                                </div>
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* FAQ Section */}
+            {/* Why Choose Us Section - Enhanced */}
             <section className="py-20 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            Frequently Asked Questions
+                        <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#e11c09]/10 to-[#1037b6]/10 text-[#e11c09] px-4 py-2 rounded-full mb-6">
+                            <Star className="w-5 h-5" />
+                            <span className="text-sm font-medium">Why Choose Us</span>
+                        </div>
+                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                            Professional Service
+                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                                You Can Trust
+                            </span>
+                        </h2>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                        {[
+                            {
+                                icon: <Truck className="w-10 h-10 sm:w-12 sm:h-12 text-[#e11c09]" />,
+                                title: "Fast Delivery",
+                                description: "Quick and efficient moving services across India"
+                            },
+                            {
+                                icon: <Shield className="w-10 h-10 sm:w-12 sm:h-12 text-[#1037b6]" />,
+                                title: "Safe & Secure",
+                                description: "Your belongings are protected with comprehensive insurance"
+                            },
+                            {
+                                icon: <Users className="w-10 h-10 sm:w-12 sm:h-12 text-[#e11c09]" />,
+                                title: "Expert Team",
+                                description: "Trained professionals with years of experience"
+                            },
+                            {
+                                icon: <Award className="w-10 h-10 sm:w-12 sm:h-12 text-[#1037b6]" />,
+                                title: "Quality Assured",
+                                description: "15+ years of excellence in the moving industry"
+                            }
+                        ].map((feature, index) => (
+                            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:-translate-y-2 bg-white overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#e11c09]/5 to-[#1037b6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <CardHeader className="relative z-10 p-4 sm:p-6">
+                                    <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                        {feature.icon}
+                                    </div>
+                                    <CardTitle className="text-lg sm:text-xl text-gray-900">{feature.title}</CardTitle>
+                                </CardHeader>
+                                <CardContent className="relative z-10 p-4 sm:p-6 pt-0">
+                                    <CardDescription className="text-gray-600 text-sm sm:text-base">
+                                        {feature.description}
+                                    </CardDescription>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section - Enhanced */}
+            <section className="py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#e11c09]/10 to-[#1037b6]/10 text-[#e11c09] px-4 py-2 rounded-full mb-6">
+                            <MessageSquare className="w-5 h-5" />
+                            <span className="text-sm font-medium">FAQ</span>
+                        </div>
+                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                            Frequently Asked
+                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                                Questions
+                            </span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Find answers to common questions about our services and moving process.
+                            Get answers to common questions about our moving services.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
                         {[
                             {
-                                question: "How much advance notice do you need for a move?",
-                                answer: "We recommend booking at least 2-3 weeks in advance for local moves and 4-6 weeks for long-distance relocations. However, we can accommodate urgent moves with shorter notice."
+                                question: "How far in advance should I book your services?",
+                                answer: "We recommend booking at least 2-3 weeks in advance for domestic moves and 4-6 weeks for international relocations to ensure availability."
                             },
                             {
                                 question: "Do you provide packing materials?",
-                                answer: "Yes, we provide all necessary packing materials including boxes, bubble wrap, packing paper, and tape. These are included in our packing service packages."
+                                answer: "Yes, we provide all necessary packing materials including boxes, bubble wrap, packing paper, and tape at competitive rates."
                             },
                             {
                                 question: "Is my furniture insured during the move?",
-                                answer: "Absolutely! All our moves include comprehensive insurance coverage. We also offer additional insurance options for high-value items."
+                                answer: "Absolutely! All our moves include comprehensive insurance coverage to protect your belongings throughout the entire process."
                             },
                             {
-                                question: "Can you help with furniture assembly?",
-                                answer: "Yes, our team can disassemble furniture at the origin and reassemble it at the destination. This service is included in our standard moving packages."
+                                question: "Can you handle fragile items?",
+                                answer: "Yes, our team is specially trained to handle fragile items with extra care using appropriate packing materials and techniques."
+                            },
+                            {
+                                question: "Do you offer weekend moving services?",
+                                answer: "Yes, we offer weekend moving services for office relocations to minimize business disruption."
                             },
                             {
                                 question: "What areas do you serve?",
-                                answer: "We provide services across India with coverage in 100+ cities. We also offer international moving services to major destinations worldwide."
-                            },
-                            {
-                                question: "Do you work on weekends and holidays?",
-                                answer: "Yes, we provide moving services 7 days a week, including weekends and holidays. We understand that sometimes moves need to happen outside regular business hours."
+                                answer: "We serve customers across India with our extensive network covering 100+ cities nationwide."
                             }
                         ].map((faq, index) => (
-                            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                                <CardHeader>
-                                    <CardTitle className="text-lg text-gray-900">{faq.question}</CardTitle>
+                            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#e11c09]/5 to-[#1037b6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <CardHeader className="relative z-10 p-4 sm:p-6">
+                                    <CardTitle className="text-base sm:text-lg text-gray-900 flex items-center">
+                                        <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#e11c09] mr-2 sm:mr-3 flex-shrink-0" />
+                                        <span className="break-words">{faq.question}</span>
+                                    </CardTitle>
                                 </CardHeader>
-                                <CardContent>
-                                    <CardDescription className="text-gray-600 text-base">
+                                <CardContent className="relative z-10 p-4 sm:p-6 pt-0">
+                                    <CardDescription className="text-gray-600 text-sm sm:text-base">
                                         {faq.answer}
                                     </CardDescription>
                                 </CardContent>
@@ -315,22 +311,34 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-20 bg-[#bf4705]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-4xl font-bold text-white mb-6">
-                        Ready to Start Your Moving Journey?
+            {/* CTA Section - Enhanced */}
+            <section className="py-20 bg-gradient-to-br from-[#1037b6] via-[#0d2b8f] to-[#e11c09] relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-0 right-0 w-72 h-72 bg-white rounded-full translate-x-1/2 -translate-y-1/2"></div>
+                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-1/2 translate-y-1/2"></div>
+                </div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+                        <Star className="w-5 h-5 text-yellow-300 fill-current" />
+                        <span className="text-sm font-medium">Get Started Today</span>
+                    </div>
+                    <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                        Ready to Start Your
+                        <span className="block bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                            Moving Journey?
+                        </span>
                     </h2>
-                    <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-                        Contact us today for a free consultation and quote. Our moving experts are ready to help
-                        you plan the perfect relocation experience.
+                    <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+                        Contact us today for a free consultation and quote. Our moving experts are ready to help you plan the perfect relocation experience.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button className="bg-white text-[#bf4705] px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-200 hover:scale-105 shadow-lg">
+                        <Button className="bg-[#e11c09] hover:bg-[#b81500] text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl group">
                             Get Free Quote
+                            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                         </Button>
-                        <Button variant="outline" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-[#bf4705] transition-all duration-200">
+                        <Button variant="outline" className="border-white text-[#1037b6] hover:bg-white hover:text-[#1037b6] px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 group">
                             Call Now
+                            <Phone className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
                         </Button>
                     </div>
                 </div>
