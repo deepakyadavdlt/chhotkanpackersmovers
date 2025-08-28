@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { siteConstants } from "@/constants/siteConstants";
 import { MapPin, Phone, Mail, Clock, MessageSquare, Star, Send, CheckCircle, ArrowRight, Home, Truck, Package, Users, Award, Shield } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactPage() {
     return (
@@ -198,7 +199,7 @@ export default function ContactPage() {
                         </div>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                             Professional Service
-                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#e11c09] bg-clip-text text-transparent">
                                 You Can Trust
                             </span>
                         </h2>
@@ -256,7 +257,7 @@ export default function ContactPage() {
                         </div>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                             Frequently Asked
-                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#e11c09] bg-clip-text text-transparent">
                                 Questions
                             </span>
                         </h2>
@@ -320,7 +321,7 @@ export default function ContactPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                     <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
                         <Star className="w-5 h-5 text-yellow-300 fill-current" />
-                        <span className="text-sm font-medium">Get Started Today</span>
+                        <span className="text-sm text-white font-medium">Get Started Today</span>
                     </div>
                     <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                         Ready to Start Your
@@ -332,14 +333,18 @@ export default function ContactPage() {
                         Contact us today for a free consultation and quote. Our moving experts are ready to help you plan the perfect relocation experience.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button className="bg-[#e11c09] hover:bg-[#b81500] text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl group">
-                            Get Free Quote
-                            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                        </Button>
-                        <Button variant="outline" className="border-white text-[#1037b6] hover:bg-white hover:text-[#1037b6] px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 group">
-                            Call Now
-                            <Phone className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
-                        </Button>
+                        <Link href="/contact">
+                            <Button className="bg-[#e11c09] hover:bg-[#b81500] text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl group">
+                                Get Free Quote
+                                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </Button>
+                        </Link>
+                        <a href={`tel:${siteConstants.phone}`}>
+                            <Button variant="outline" className="border-white text-[#1037b6] hover:bg-white hover:text-[#1037b6] px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 group">
+                                Call Now
+                                <Phone className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
+                            </Button>
+                        </a>
                     </div>
                 </div>
             </section>

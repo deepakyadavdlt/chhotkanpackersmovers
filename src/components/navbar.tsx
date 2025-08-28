@@ -45,28 +45,42 @@ export default function Navbar() {
                             Home
                         </Link>
 
+                        <Link href="/about" className="text-gray-900 hover:text-[#e11c09] transition-colors duration-200 font-medium">
+                            About Us
+                        </Link>
+
                         {/* Services Dropdown */}
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                                <Button variant="ghost" className="text-gray-900 hover:text-[#e11c09] hover:bg-gray-100 transition-colors duration-200 font-medium">
-                                    Services
-                                    <ChevronDown className="ml-2 h-4 w-4" />
+                                <Button variant="ghost" className="text-gray-900 hover:text-[#e11c09] hover:bg-gray-100 transition-all duration-300 font-medium group">
+                                    <span className="relative">
+                                        Services
+                                    </span>
+                                    <ChevronDown className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                                 </Button>
                             </DropdownMenuTrigger>
-                            <DropdownMenuContent className="w-56 bg-white border border-gray-200 shadow-xl rounded-lg">
+                            <DropdownMenuContent className="w-64 bg-white/95 backdrop-blur-sm border border-gray-200/50 shadow-2xl rounded-xl p-2 mt-2">
                                 {services.map((service) => (
                                     <DropdownMenuItem key={service.name} asChild>
-                                        <Link href={service.href} className="text-gray-700 hover:text-[#e11c09] hover:bg-gray-50 cursor-pointer">
+                                        <Link
+                                            href={service.href}
+                                            className="flex items-center px-4 py-3 text-gray-700 hover:text-[#e11c09] hover:bg-gradient-to-r hover:from-[#e11c09]/5 hover:to-[#1037b6]/5 cursor-pointer rounded-lg transition-all duration-300 font-medium"
+                                        >
+                                            <div className="w-2 h-2 bg-[#e11c09] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                             {service.name}
                                         </Link>
                                     </DropdownMenuItem>
                                 ))}
+
+
                             </DropdownMenuContent>
                         </DropdownMenu>
 
-                        <Link href="/about" className="text-gray-900 hover:text-[#e11c09] transition-colors duration-200 font-medium">
-                            About
+                        <Link href="/locations" className="text-gray-900 hover:text-[#e11c09] transition-colors duration-200 font-medium">
+                            Locations
                         </Link>
+
+
                         <Link href="/contact" className="text-gray-900 hover:text-[#e11c09] transition-colors duration-200 font-medium">
                             Contact
                         </Link>
@@ -103,7 +117,14 @@ export default function Navbar() {
                                 Home
                             </Link>
 
-                            {/* Mobile Services */}
+
+                            <Link
+                                href="/about"
+                                className="block px-3 py-2 text-gray-900 font-medium hover:text-[#e11c09] transition-colors duration-200"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                About Us
+                            </Link>
                             <div className="px-3 py-2">
                                 <button
                                     onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -130,13 +151,12 @@ export default function Navbar() {
                                     </div>
                                 )}
                             </div>
-
                             <Link
-                                href="/about"
+                                href="/locations"
                                 className="block px-3 py-2 text-gray-900 font-medium hover:text-[#e11c09] transition-colors duration-200"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
-                                About
+                                Locations
                             </Link>
                             <Link
                                 href="/contact"
@@ -148,9 +168,11 @@ export default function Navbar() {
 
                             {/* Mobile CTA */}
                             <div className="px-3 pt-2">
-                                <Button className="w-full bg-gradient-to-r from-[#e11c09] to-[#b81500] hover:from-[#b81500] hover:to-[#e11c09] text-white py-2 rounded-lg font-medium transition-all duration-300">
-                                    Get Quote
-                                </Button>
+                                <Link href="/contact">
+                                    <Button className="w-full bg-gradient-to-r from-[#e11c09] to-[#b81500] hover:from-[#b81500] hover:to-[#e11c09] text-white py-2 rounded-lg font-medium transition-all duration-300">
+                                        Get Quote
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>

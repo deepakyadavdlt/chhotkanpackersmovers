@@ -5,6 +5,7 @@ import { siteConstants } from "@/constants/siteConstants";
 import { Truck, Shield, Clock, Users, CheckCircle, Star, ArrowRight, MapPin, Phone, Mail, Award, Zap } from "lucide-react";
 import { loadingAndUnloadingImage } from "@/assets/services";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function LoadingAndUnloadingPage() {
     return (
@@ -46,7 +47,7 @@ export default function LoadingAndUnloadingPage() {
                             </div>
                             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                                 Professional Loading and
-                                <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                                <span className="block bg-gradient-to-r from-[#e11c09] to-[#e11c09] bg-clip-text text-transparent">
                                     Unloading Solutions
                                 </span>
                             </h2>
@@ -108,7 +109,7 @@ export default function LoadingAndUnloadingPage() {
                         </div>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                             Comprehensive
-                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#e11c09] bg-clip-text text-transparent">
                                 Loading Services
                             </span>
                         </h2>
@@ -176,7 +177,7 @@ export default function LoadingAndUnloadingPage() {
                         </div>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                             How We Handle Your
-                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#e11c09] bg-clip-text text-transparent">
                                 Loading Needs
                             </span>
                         </h2>
@@ -233,7 +234,7 @@ export default function LoadingAndUnloadingPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                     <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
                         <Star className="w-5 h-5 text-yellow-300 fill-current" />
-                        <span className="text-sm font-medium">Get Started Today</span>
+                        <span className="text-sm text-white font-medium">Get Started Today</span>
                     </div>
                     <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                         Ready to Start Your
@@ -245,14 +246,18 @@ export default function LoadingAndUnloadingPage() {
                         Contact us today for a free consultation and quote for your loading and unloading needs.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button className="bg-[#e11c09] hover:bg-[#b81500] text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl group">
-                            Get Free Quote
-                            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                        </Button>
-                        <Button className="bg-white text-[#1037b6] hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 group shadow-xl">
-                            Contact Us
-                            <Phone className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
-                        </Button>
+                        <Link href="/contact">
+                            <Button className="bg-[#e11c09] hover:bg-[#b81500] text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl group">
+                                Get Free Quote
+                                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </Button>
+                        </Link>
+                        <a href={`tel:${siteConstants.phone}`}>
+                            <Button className="bg-white text-[#1037b6] hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 group shadow-xl">
+                                Contact Us
+                                <Phone className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
+                            </Button>
+                        </a>
                     </div>
                 </div>
             </section>

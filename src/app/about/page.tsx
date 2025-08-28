@@ -66,7 +66,7 @@ export default function AboutPage() {
                                     and build lasting relationships.
                                 </p>
                             </div>
-                            <Button className="bg-gradient-to-r from-[#e11c09] to-[#1037b6] hover:from-[#b81500] hover:to-[#0d2b8f] text-white px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl">
+                            <Button className="bg-gradient-to-r from-[#e11c09] to-[#e11c09] hover:from-[#b81500] hover:to-[#b81500] text-white px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl">
                                 Learn More About Us
                             </Button>
                         </div>
@@ -74,7 +74,7 @@ export default function AboutPage() {
                             <div className="relative bg-gradient-to-br from-[#e11c09]/10 to-[#1037b6]/10 rounded-3xl p-8 shadow-xl">
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#e11c09]/5 to-[#1037b6]/5 rounded-3xl"></div>
                                 <div className="relative z-10 text-center">
-                                    <div className="w-28 h-28 bg-gradient-to-br from-[#e11c09] to-[#1037b6] rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+                                    <div className="w-28 h-28 bg-gradient-to-br from-[#e11c09] to-[#e11c09] rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
                                         <Award className="w-14 h-14 text-white" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-gray-900 mb-4">15+ Years of Excellence</h3>
@@ -164,7 +164,7 @@ export default function AboutPage() {
                         </div>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                             We create opportunity to
-                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#e11c09] bg-clip-text text-transparent">
                                 reach potential
                             </span>
                         </h2>
@@ -232,7 +232,7 @@ export default function AboutPage() {
                         </div>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                             We are helping you to get
-                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#e11c09] bg-clip-text text-transparent">
                                 moving solution
                             </span>
                         </h2>
@@ -283,7 +283,7 @@ export default function AboutPage() {
                                     <CardDescription className="text-gray-600 text-base mb-4">
                                         {service.description}
                                     </CardDescription>
-                                    <Button className="bg-gradient-to-r from-[#e11c09] to-[#1037b6] hover:from-[#b81500] hover:to-[#0d2b8f] text-white w-full group-hover:scale-105 transition-transform duration-300">
+                                    <Button className="bg-gradient-to-r from-[#e11c09] to-[#e11c09] hover:from-[#b81500] hover:to-[#b81500] text-white w-full group-hover:scale-105 transition-transform duration-300">
                                         Learn More
                                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                                     </Button>
@@ -305,7 +305,7 @@ export default function AboutPage() {
                             </div>
                             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                                 Professional Team with
-                                <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                                <span className="block bg-gradient-to-r from-[#e11c09] to-[#e11c09] bg-clip-text text-transparent">
                                     Essential Training
                                 </span>
                             </h2>
@@ -343,7 +343,7 @@ export default function AboutPage() {
                             <div className="bg-gradient-to-br from-[#e11c09]/10 to-[#1037b6]/10 rounded-3xl p-8 shadow-xl">
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#e11c09]/5 to-[#1037b6]/5 rounded-3xl"></div>
                                 <div className="relative z-10 text-center">
-                                    <div className="w-28 h-28 bg-gradient-to-br from-[#e11c09] to-[#1037b6] rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+                                    <div className="w-28 h-28 bg-gradient-to-br from-[#e11c09] to-[#e11c09] rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
                                         <Users className="w-14 h-14 text-white" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Trained Professionals</h3>
@@ -402,7 +402,7 @@ export default function AboutPage() {
                         </div>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                             Ready to start your
-                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#e11c09] bg-clip-text text-transparent">
                                 moving journey?
                             </span>
                         </h2>

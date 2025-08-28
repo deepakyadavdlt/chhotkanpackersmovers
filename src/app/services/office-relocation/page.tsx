@@ -5,6 +5,7 @@ import { siteConstants } from "@/constants/siteConstants";
 import { Building2, Truck, Shield, Clock, Users, CheckCircle, Star, ArrowRight, MapPin, Phone, Mail, Award, Zap } from "lucide-react";
 import { officeRelocationImage } from "@/assets/services";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function OfficeRelocationPage() {
     return (
@@ -46,7 +47,7 @@ export default function OfficeRelocationPage() {
                             </div>
                             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                                 Professional Office
-                                <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                                <span className="block bg-gradient-to-r from-[#e11c09] to-[#e11c09] bg-clip-text text-transparent">
                                     Relocation Solutions
                                 </span>
                             </h2>
@@ -108,7 +109,7 @@ export default function OfficeRelocationPage() {
                         </div>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                             Comprehensive
-                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#e11c09] bg-clip-text text-transparent">
                                 Office Services
                             </span>
                         </h2>
@@ -176,7 +177,7 @@ export default function OfficeRelocationPage() {
                         </div>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                             How We Handle Your
-                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#1037b6] bg-clip-text text-transparent">
+                            <span className="block bg-gradient-to-r from-[#e11c09] to-[#e11c09] bg-clip-text text-transparent">
                                 Office Move
                             </span>
                         </h2>
@@ -208,7 +209,7 @@ export default function OfficeRelocationPage() {
                             <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:-translate-y-2 bg-white overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#e11c09]/5 to-[#1037b6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <CardHeader className="relative z-10">
-                                    <div className="w-16 h-16 bg-gradient-to-br from-[#e11c09] to-[#1037b6] rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    <div className="w-16 h-16 bg-gradient-to-br from-[#e11c09] to-[#e11c09] rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                                         <span className="text-white font-bold text-xl">{process.step}</span>
                                     </div>
                                     <CardTitle className="text-xl text-gray-900">{process.title}</CardTitle>
@@ -233,7 +234,7 @@ export default function OfficeRelocationPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                     <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
                         <Star className="w-5 h-5 text-yellow-300 fill-current" />
-                        <span className="text-sm font-medium">Get Started Today</span>
+                        <span className="text-sm text-white font-medium">Get Started Today</span>
                     </div>
                     <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                         Ready to Start Your
@@ -245,14 +246,18 @@ export default function OfficeRelocationPage() {
                         Contact us today for a free consultation and quote for your office relocation needs.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button className="bg-[#e11c09] hover:bg-[#b81500] text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl group">
-                            Get Free Quote
-                            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                        </Button>
-                        <Button className="bg-white text-[#1037b6] hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 group shadow-xl">
-                            Contact Us
-                            <Phone className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
-                        </Button>
+                        <Link href="/contact">
+                            <Button className="bg-[#e11c09] hover:bg-[#b81500] text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl group">
+                                Get Free Quote
+                                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </Button>
+                        </Link>
+                        <a href={`tel:${siteConstants.phone}`}>
+                            <Button className="bg-white text-[#1037b6] hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 group shadow-xl">
+                                Contact Us
+                                <Phone className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
+                            </Button>
+                        </a>
                     </div>
                 </div>
             </section>

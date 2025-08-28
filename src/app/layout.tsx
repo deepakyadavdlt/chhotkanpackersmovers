@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Topbar from "@/components/topbar";
+import FloatingActions from "@/components/floating-actions";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chhotkan Packers - Professional Packers & Movers Services",
-  description: "Reliable, safe, and efficient moving services across India. Professional packers and movers with 15+ years of experience. Get free quote today!",
+  title: "Chhotkan Packers and Movers - Professional Moving Services",
+  description: "Complete packing and moving solutions for any conceivable kind of goods with cutting-edge methods focused on quality.",
 };
 
 export default function RootLayout({
@@ -26,12 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={inter.className}>
+        <Topbar />
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <FloatingActions />
       </body>
     </html>
   );
