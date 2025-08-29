@@ -18,8 +18,8 @@ const services = [
 const quickLinks = [
     { name: "About Us", href: "/about" },
     { name: "Contact Us", href: "/contact" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
+    { name: "Locations", href: "/locations" },
+    { name: "Sitemap", href: "/sitemap.xml" },
 ];
 
 export default function Footer() {
@@ -77,7 +77,7 @@ export default function Footer() {
                                 <li key={link.name}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-300 hover:text-[#1037b6] transition-colors duration-200"
+                                        className="text-gray-300 hover:text-[#e11c09] transition-colors duration-200"
                                     >
                                         {link.name}
                                     </Link>
