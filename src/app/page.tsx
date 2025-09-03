@@ -41,9 +41,9 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
-                <span className="block">We Make Moving</span>
+                <span className="block">Best Packers And Movers</span>
                 <span className="block bg-gradient-to-r from-white to-red-100 bg-clip-text text-transparent">
-                  Cheap & Safe
+                  In Patna
                 </span>
               </h1>
 
