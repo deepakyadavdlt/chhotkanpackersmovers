@@ -7,15 +7,18 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, Users, Truck, Award, Globe, Search, ArrowRight } from "lucide-react";
 import { siteConstants } from "@/constants/siteConstants";
 
-// Location data based on the reference website
+// Location data based on the reference website (alphabetical by name)
 const locations = [
     { name: "Araria", slug: "araria", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Arwal", slug: "arwal", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Aurangabad", slug: "aurangabad", state: "Bihar, India", support: "24/7", fleet: "Available" },
+    { name: "Bailey Road", slug: "bailey-road", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Banka", slug: "banka", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Begusarai", slug: "begusarai", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Bhagalpur", slug: "bhagalpur", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Bhojpur", slug: "bhojpur", state: "Bihar, India", support: "24/7", fleet: "Available" },
+    { name: "Bihta", slug: "bihta", state: "Bihar, India", support: "24/7", fleet: "Available" },
+    { name: "Boring Road", slug: "boring-road", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Buxar", slug: "buxar", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Darbhanga", slug: "darbhanga", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "East Champaran", slug: "east-champaran", state: "Bihar, India", support: "24/7", fleet: "Available" },
@@ -24,12 +27,14 @@ const locations = [
     { name: "Jamui", slug: "jamui", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Jehanabad", slug: "jehanabad", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Kaimur", slug: "kaimur", state: "Bihar, India", support: "24/7", fleet: "Available" },
+    { name: "Kankarbagh", slug: "kankarbagh", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Katihar", slug: "katihar", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Khagaria", slug: "khagaria", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Kishanganj", slug: "kishanganj", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Lakhisarai", slug: "lakhisarai", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Madhepura", slug: "madhepura", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Madhubani", slug: "madhubani", state: "Bihar, India", support: "24/7", fleet: "Available" },
+    { name: "Mokama", slug: "mokama", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Munger", slug: "munger", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Muzaffarpur", slug: "muzaffarpur", state: "Bihar, India", support: "24/7", fleet: "Available" },
     { name: "Nalanda", slug: "nalanda", state: "Bihar, India", support: "24/7", fleet: "Available" },

@@ -17,12 +17,13 @@ export async function GET() {
         "services/loading-and-unloading",
     ];
 
-    // All 38 districts of Bihar
+    // All 38 districts of Bihar + local areas (alphabetical by slug)
     const districts = [
-        "araria", "arwal", "aurangabad", "banka", "begusarai", "bhagalpur",
-        "bhojpur", "buxar", "darbhanga", "east-champaran", "gaya", "gopalganj",
-        "jamui", "jehanabad", "kaimur", "katihar", "khagaria", "kishanganj",
-        "lakhisarai", "madhepura", "madhubani", "munger", "muzaffarpur",
+        "araria", "arwal", "aurangabad", "bailey-road", "banka", "begusarai",
+        "bhagalpur", "bhojpur", "bihta", "boring-road", "buxar", "darbhanga",
+        "east-champaran", "gaya", "gopalganj", "jamui", "jehanabad", "kaimur",
+        "kankarbagh", "katihar", "khagaria", "kishanganj", "lakhisarai",
+        "madhepura", "madhubani", "mokama", "munger", "muzaffarpur",
         "nalanda", "nawada", "patna", "purnia", "rohtas", "saharsa",
         "samastipur", "saran", "sheikhpura", "sheohar", "sitamarhi",
         "siwan", "supaul", "vaishali", "west-champaran"

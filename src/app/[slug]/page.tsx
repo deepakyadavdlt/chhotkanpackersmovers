@@ -67,6 +67,11 @@ const locations = {
     "supaul": { name: "Supaul", state: "Bihar, India", population: "2.2M+", established: "1991" },
     "vaishali": { name: "Vaishali", state: "Bihar, India", population: "3.5M+", established: "1972" },
     "west-champaran": { name: "West Champaran", state: "Bihar, India", population: "4.0M+", established: "1866" },
+    "mokama": { name: "Mokama", state: "Bihar, India", population: "Local area", established: "Part of Patna" },
+    "kankarbagh": { name: "Kankarbagh", state: "Bihar, India", population: "Local area", established: "Part of Patna" },
+    "bihta": { name: "Bihta", state: "Bihar, India", population: "Local area", established: "Part of Patna" },
+    "boring-road": { name: "Boring Road", state: "Bihar, India", population: "Local area", established: "Part of Patna" },
+    "bailey-road": { name: "Bailey Road", state: "Bihar, India", population: "Local area", established: "Part of Patna" },
 };
 
 const services = [
